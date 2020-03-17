@@ -1,0 +1,8 @@
+<script type="text/javascript" src="/js/raphael.min.js"></script>
+<script type="text/javascript" src="/js/flowchart.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+  var diagram = flowchart.parse(
+    $("#flowchart-code").text());
+  diagram.drawSVG('flowchart-diagram');
+</script>
