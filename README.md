@@ -1,0 +1,1 @@
+# bs-blog-hugo-theme
