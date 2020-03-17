@@ -1,0 +1,17 @@
+baseURL = "http://example.org/"
+languageCode = "utf-8"
+title = "Bunshinn's page"
+
+
+#theme = "book"
+#theme = "ananke"
+
+
+[params]
+    mainSections = ["posts",] 
+    doc = "/doc"
+	subtitle = "信心是黑暗中的灯塔，任何时候都不能丢"
+	wechat = "htttp://www.baidu.com"
+	tag = "tags"
+	category = "categories"
+
