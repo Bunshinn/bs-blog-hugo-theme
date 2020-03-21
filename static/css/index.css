@@ -164,9 +164,13 @@ nav a {
 body > header, body > article, body > footer {
   padding: 1.2em;
 }
+/*body > p {
+    padding: .21em;
+    padding-left:2em;
+}*/
 
 @media (min-width: 32em) {
   body > header, body > article, body > footer {
-    padding: 1.05em calc(28% - 12em);
+    padding: 1em calc(28% - 12em);
   }
 }

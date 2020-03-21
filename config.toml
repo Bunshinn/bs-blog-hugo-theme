@@ -5,10 +5,10 @@ title = "Bunshinn's page"
 
 theme = "bs-blog"
 
-
 [params]
     mainSections = ["posts",] 
     doc = "/doc"
+    book = "/the-eclectic-readers"
 	tag = "tags"
 	category = "categories"
 

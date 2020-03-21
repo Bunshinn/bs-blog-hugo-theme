@@ -24,7 +24,11 @@
   {{ if not (gt (len .Site.Menus) 1) }}
     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   {{ end }}
-  {{ with .Site.Params.doc }}<a href="{{ . }}" target="_blank">doc</a>{{ end }}
+  
+  <nav>
+    {{ with .Site.Params.book }}<a href="{{ . }}" target="_blank">book</a>{{ end }}
+    {{ with .Site.Params.doc }}<a href="{{ . }}" target="_blank">doc</a>{{ end }}
+  </nav>
   {{ range $menu, $items := .Site.Menus }}
     <nav>
     {{ range $items }}
