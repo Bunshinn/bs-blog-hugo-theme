@@ -8,8 +8,8 @@ tags: ["ubuntu", "python", "Vnote"]
 
 ## ubuntu操作
 
-- 列出已安装包 ```dpkg -l```  安装路径`dpkg -L | grep ftp`  查看软件版本 `aptitude  show ftp`  
-- 移除安装包 ```apt-get autoremove --purge pkgname```
+- 列出已安装包 `dpkg -l`  安装路径`dpkg -L | grep ftp`  查看软件版本 `aptitude  show ftp`  
+- 移除安装包 `apt-get autoremove --purge pkgname`
 ## python  
 ubuntu 18.04默认已安装python3, 运行输入`python`显示未安装， 将python3软链接至python   
 
