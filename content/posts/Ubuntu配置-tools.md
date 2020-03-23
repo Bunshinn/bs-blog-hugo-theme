@@ -33,6 +33,7 @@ celery -A worker tasks -l info
 参数说明:
 ```
   -A APP, --app APP
+  -B beat, 周期性任务
   -b BROKER, --broker BROKER
   --result-backend RESULT_BACKEND
   --loader LOADER
