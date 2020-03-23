@@ -82,3 +82,10 @@ pstree -ap | grep gunicorn
 
 ## Vnote
 
+markdown文本编辑器, 可预览导出pdf等格式, 熟悉中...
+
+## Python 库
+
+- pandas_profiling 
+- wget 下载文件
+- sh shell脚本
