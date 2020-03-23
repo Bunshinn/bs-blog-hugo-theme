@@ -79,8 +79,9 @@ pstree -ap | grep gunicorn
 ​--spew：打印服务器执⾏过的每⼀条语句，默认False。此选择为原⼦性的，即要么全部打印，要么全部不打印； 
 ​--check-config ：显示现在的配置，默认值为False，即显示。 
 ​-e ENV, --env ENV： 设置环境变量；
+```
 
-## Vnote
+## [Vnote](https://github.com/tamlok/vnote/releases)
 
 markdown文本编辑器, 可预览导出pdf等格式, 熟悉中...
 
