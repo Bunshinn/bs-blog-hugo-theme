@@ -90,3 +90,5 @@ markdown文本编辑器, 可预览导出pdf等格式, 熟悉中...
 - pandas_profiling 
 - wget 下载文件
 - sh shell脚本
+- cherry 定时任务, 异步任务
+- flask
