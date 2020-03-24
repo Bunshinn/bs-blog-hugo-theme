@@ -28,7 +28,7 @@ ubuntu 18.04默认已安装python3, 运行输入`python`显示未安装， 将py
 pstree -ap | grep celery
 
 #celery启动
-celery -A worker tasks -l info
+celery -B -A tasks worker -l info
 ```
 参数说明:
 ```
