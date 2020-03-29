@@ -1,7 +1,7 @@
 ---
 title: "first blog"
 date: 2020-03-13T19:48:12+08:00
-draft: False
+draft: true
 author: bunshinn
 tags: ["hugo", "themes"]
 ---
