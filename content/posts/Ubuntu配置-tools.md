@@ -92,3 +92,7 @@ markdown文本编辑器, 可预览导出pdf等格式, 熟悉中...
 - sh shell脚本
 - cherry 定时任务, 异步任务
 - flask
+
+## Linux命令
+
+文件夹压缩 `tar zcvf FileName.tar.gz DirName`
