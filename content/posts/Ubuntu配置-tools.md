@@ -95,4 +95,10 @@ markdown文本编辑器, 可预览导出pdf等格式, 熟悉中...
 
 ## Linux命令
 
-文件夹压缩 `tar zcvf FileName.tar.gz DirName`
+压缩文件夹至tar.gz文件 `tar zcvf FileName.tar.gz DirName`
+```sh
+# 从帮助文件中查看用法
+tar --help
+tar -cf filename.tar dir
+tar -tvf tarfile.tar 
+```
