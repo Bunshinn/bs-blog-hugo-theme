@@ -122,10 +122,10 @@ pre {
 }
 
 :not(pre) > code {
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
   font-size: .86em;
   background: rgba(142, 142, 145, 0.16);
-  opacity: .86;
+  opacity: .88;
   border-radius: 2px;
   margin: 0 .1em;
   padding: .2em .4em;
