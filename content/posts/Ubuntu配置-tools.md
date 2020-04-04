@@ -23,7 +23,7 @@ ubuntu 18.04默认已安装python3, 运行输入`python`显示未安装， 将py
 	link /usr/bin/ipython3 /usr/bin/ipython
 
 ## celery布署
-```
+```sh
 #查看celery进程树, 结束任务时只需结束主进程
 pstree -ap | grep celery
 
@@ -31,7 +31,7 @@ pstree -ap | grep celery
 celery -B -A tasks worker -l info
 ```
 参数说明:
-```
+```sh
   -A APP, --app APP
   -B beat, 周期性任务
   -b BROKER, --broker BROKER
@@ -46,14 +46,14 @@ celery -B -A tasks worker -l info
 
 ## Flask布署  
 使用gunicorn, 安装`pip3 install gunicorn`,
-```
+```sh
 gunicorn -w 2 -b 127.0.0.1:5000 app:app -D
 
 # 查看gunicorn主进程
 pstree -ap | grep gunicorn
 ```
 参数说明:
-```
+```sh
 -w 处理进程数
 -b 运⾏主机ip端⼝
 -c CONFIG : CONFIG,配置⽂件的路径，通过配置⽂件启动；⽣产环境使⽤； 
@@ -102,3 +102,4 @@ tar --help
 tar -cf filename.tar dir
 tar -tvf tarfile.tar 
 ```
+
