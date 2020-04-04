@@ -1,7 +1,7 @@
 ---
 title: "shell命令行基础"
 date: 2020-03-13T19:48:12+08:00
-draft: true
+draft: false
 author: bunshinn
 tags: ["hugo", "themes"]
 ---
@@ -53,4 +53,10 @@ vi path/to/filename #打开文件, 只读模式
 ```sh 
 nohup  # no hang up 的缩写，就是不挂断的意思。
 
+# 压缩文件夹至tar.gz文件 ``
+# 从帮助文件中查看用法
+tar --help
+tar -cf filename.tar dir
+tar -tvf tarfile.tar 
+tar zcvf FileName.tar.gz DirName
 ```

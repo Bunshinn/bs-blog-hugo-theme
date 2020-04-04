@@ -93,13 +93,4 @@ markdown文本编辑器, 可预览导出pdf等格式, 熟悉中...
 - cherry 定时任务, 异步任务
 - flask
 
-## Linux命令
-
-压缩文件夹至tar.gz文件 `tar zcvf FileName.tar.gz DirName`
-```sh
-# 从帮助文件中查看用法
-tar --help
-tar -cf filename.tar dir
-tar -tvf tarfile.tar 
-```
 
