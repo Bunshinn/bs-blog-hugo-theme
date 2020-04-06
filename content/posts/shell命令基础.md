@@ -3,7 +3,7 @@ title: "shell命令行基础"
 date: 2020-03-13T19:48:12+08:00
 draft: false
 author: bunshinn
-tags: ["hugo", "themes"]
+tags: ["linux", "shell"]
 ---
 
 ## 基础命令
