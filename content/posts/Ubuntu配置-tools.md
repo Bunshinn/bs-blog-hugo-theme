@@ -3,8 +3,45 @@ title: "Ubuntu配置-tools-eg:python,ipython"
 date: 2020-03-14T19:58:12+08:00
 draft: False
 author: bunshinn
-tags: ["ubuntu", "python", "Vnote"]
+tags: ["ubuntu", "python"]
 ---
+
+
+### ubuntu子系统安装
+安装步骤:  
+1.在Microsoft Sore中搜索 ubuntu  
+2.选择ubuntu, 点击安装, 等待安装完成  
+3.安装完成后点击[开始]->[ubuntu]图标运行, 或在cmd中直接运行ubuntu命令  
+4.系统会初始化, 并要求设置用户命密码, 此时关闭程序. 并再次运行, 将会以root无密码方式直接进入命令行.
+
+### ubuntu配置 
+
+更新ubuntu, 而ubuntu默认的镜像国内下载速度较慢, 可以使用[清华镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)等进行加速.  
+```
+#备份Ubuntu 的软件源配置文件
+cp /etc/apt/sources.list /etc/apt/sources.list.bak 
+```
+将/etc/apt/sources.list文件替换为下面内容
+```
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+```
+```
+##先update, 然后upgrade. 
+sudo apt update #更新软件列表
+sudo apt upgrade #更新软件
+```
 
 ## ubuntu操作
 
@@ -13,9 +50,26 @@ tags: ["ubuntu", "python", "Vnote"]
 ## python  
 ubuntu 18.04默认已安装python3, 运行输入`python`显示未安装， 将python3软链接至python   
 
-	whereis python3
-	#python3: /usr/bin/python3 /usr/bin/python3.6
-	link /usr/bin/python3 /usr/bin/python
+  whereis python3
+  #python3: /usr/bin/python3 /usr/bin/python3.6
+  link /usr/bin/python3 /usr/bin/python
+
+### python3 Link 至 python
+```
+# 查看python3目录
+whereis python3 
+# 创建快捷方式
+link /usr/bin/python /usr/bin/python 
+```
+### pip3安装与使用
+windows10下ubuntu默认安装python3-minimal, 不包含pip等工具, 需要额外安装, 命令 sudo apt install pip3 .
+
+在使用pip3 安装python包时, 也会有下载过慢的问题, 同样也是镜像问题. 这时可以在pip3 指定-i 参数指定镜像源, 如:
+`pip3 -i https://pypi.douban.com/simple pandas`
+
+### virtualenv报错
+virtualenv默认使用python2, 直接运行会报错:
+`The path python2 (from --python=python2) does not exist`, 此时需要指定python版本,如:`virtualenv virtualdir --python=python3`
 
 ## ipython安装-基于python3    
 	sudo apt-get install ipython3
@@ -81,9 +135,6 @@ pstree -ap | grep gunicorn
 ​-e ENV, --env ENV： 设置环境变量；
 ```
 
-## [Vnote](https://github.com/tamlok/vnote/releases)
-
-markdown文本编辑器, 可预览导出pdf等格式, 熟悉中...
 
 ## Python 库
 
