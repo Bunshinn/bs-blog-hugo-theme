@@ -50,10 +50,11 @@
     <div class="hidden description">{{ safeHTML . }}</div>
   {{ end }}
 </header>
-
+<div id="diagram"></div>
 {{- block "main" . }}{{- end }}
 {{ partial "mermaid.html" . }}
 {{ partial "flowchart.html" . }}
+{{ partial "track.html" . }}
 
 </body>
 
